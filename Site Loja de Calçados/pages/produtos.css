@@ -1,21 +1,29 @@
 body{
-    background: #eeeaea;
+    background: #6b3030;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #000;
+    color: #fdfdfd;
     margin: 0;
 }
 
-header{
-    text-align: center;
-    position: relative;
-    font-style: italic;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-bottom: 50px;
+a{
+    text-decoration: none;
+    color: #fdfdfd;
 }
 
-header h2 a{
-    text-decoration: none;
-    color: #000;
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.back {
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    font-size: 30pt;
+    font-weight: bold;
 }
 
 section#produto h1{
@@ -24,15 +32,16 @@ section#produto h1{
 }
 
 div.galeria img{
-    width: 800px;
-    height: 680px;
+    width: 600px;
+    height: 500px;
     margin-left: 50px;
     margin-right: 2%;
     margin-bottom: 50px;
     float: left;
-    border-radius: 5px;
+    border-radius: 15px;
     border: 2px solid #000;
     display: flex;
+    object-fit: cover;
 }
 
 div#description{
@@ -56,42 +65,67 @@ div#description span#parc{
     color: #fc2f2f;
 }
 
-div#taman{
-    margin-top: 80px;
-}
-
-div#taman span#num{
+div#description span#num{
     font-size: 15pt;
 }
 
+div#size{
+    margin-top: 80px;
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+
 div.numb{
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 5px 20px;
-    border: 1px solid #333;
-    margin-bottom: 2%;
-    margin-right: 5px;
-    margin-top: 5px;
+    border: 2px solid #fdfdfd;
+    border-radius: 10px;
+    margin: 5px 10px 5px 0px;
     cursor: pointer;
+    transition: 0.4s;
+}
+
+div.numb:hover {
+    background: #8f4242;
+    border-radius: 15px;
 }
 
 input#btn{
     margin-top: 50px;
     padding: 30px 70px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 2px solid rgba(0, 0, 0, 0.712);
     color: #fff;
     font-size: 20pt;
     font-style: oblique;
     background: #fc2f2f;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+input#btn:hover {
+    background: #e62020;
+    border-radius:5px 20px;
 }
 
 div#pedido{
-    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 20px;
 }
 
 input#txtE{
     margin-top: 5px;
+    width: 80%;
     padding: 5px 5px;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.685);
